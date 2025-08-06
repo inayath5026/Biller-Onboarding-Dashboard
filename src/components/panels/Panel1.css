@@ -1,0 +1,58 @@
+.step-panel {
+  background: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.step-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.step-alert {
+  background: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.step-buttons .btn {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.step-buttons .btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.step-buttons .btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.step-buttons .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.step-buttons .btn-primary:hover {
+  background-color: #0069d9;
+}

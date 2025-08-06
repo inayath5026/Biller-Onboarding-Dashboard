@@ -1,0 +1,85 @@
+.signatory-form {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.signatory-form h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.signatory-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.signatory-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.signatory-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  height: 44px;
+}
+
+.signatory-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.signatory-form .full-width {
+  grid-column: span 2;
+}
+
+.form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.signatory-form button {
+  padding: 12px 24px;
+  background: #0d2b6c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.business-info-form label::after {
+  content: " *";
+  color: red;
+  font-weight: normal;
+}
+
+.signatory-form button:hover {
+  background: #0b245c;
+}
+
+@media (max-width: 768px) {
+  .signatory-form form {
+    grid-template-columns: 1fr;
+  }
+}

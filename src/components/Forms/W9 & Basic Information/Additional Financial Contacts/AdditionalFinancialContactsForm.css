@@ -1,0 +1,95 @@
+.financial-form {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.financial-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-box {
+  background: #f4f8ff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #1a3c8d;
+  border-left: 4px solid #1a3c8d;
+}
+
+.financial-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.financial-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.financial-form .required {
+  color: red;
+}
+
+.financial-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  height: 44px;
+}
+
+.financial-form input::placeholder {
+  color: #999;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.financial-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.financial-form button {
+  padding: 12px 24px;
+  background: #0d2b6c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.financial-form button:hover {
+  background: #0b245c;
+}
+
+@media (max-width: 768px) {
+  .financial-form form {
+    grid-template-columns: 1fr;
+  }
+}
