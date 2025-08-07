@@ -16,11 +16,11 @@ interface BusinessInfoFormData {
 }
 
 interface Props {
-  customerId: string;
+  billerId: string;
   formId: string;
 }
 
-const BusinessInfoForm: React.FC<Props> = ({ customerId, formId }) => {
+const BusinessInfoForm: React.FC<Props> = ({ billerId, formId }) => {
   const [formData, setFormData] = useState<BusinessInfoFormData>({
     legalName: "",
     entityType: "",
@@ -41,7 +41,7 @@ const BusinessInfoForm: React.FC<Props> = ({ customerId, formId }) => {
     const fetchForm = async () => {
       try {
         const res = await axios.get(
-          `https://your-api-domain.com/api/forms/${formId}?customerId=${customerId}`
+          `https://your-api-domain.com/api/forms/${formId}?billerId=${billerId}`
         );
         if (res.data) setFormData(res.data);
       } catch (err) {
@@ -51,7 +51,7 @@ const BusinessInfoForm: React.FC<Props> = ({ customerId, formId }) => {
       }
     };
     fetchForm();
-  }, [customerId, formId]);
+  }, [billerId, formId]);
 
   // Handle input changes
   const handleChange = (
@@ -65,7 +65,7 @@ const BusinessInfoForm: React.FC<Props> = ({ customerId, formId }) => {
     try {
       await axios.post(`https://your-api-domain.com/api/forms/${formId}`, {
         ...formData,
-        customerId,
+        billerId,
       });
       alert("Form saved successfully!");
     } catch (err) {

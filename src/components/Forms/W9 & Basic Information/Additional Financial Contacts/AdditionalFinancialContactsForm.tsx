@@ -7,9 +7,9 @@ interface AdditionalFinancialContactsFormData {
   fullName: string;
 }
 
-interface Props { customerId: string; formId: string }
+interface Props { billerId: string; formId: string }
 
-export const AdditionalFinancialContactsForm: React.FC<Props> = ({ customerId, formId }) => {
+export const AdditionalFinancialContactsForm: React.FC<Props> = ({ billerId, formId }) => {
   const [formData, setFormData] = useState<AdditionalFinancialContactsFormData>({
     title: "",
     fullName: ""
@@ -17,10 +17,10 @@ export const AdditionalFinancialContactsForm: React.FC<Props> = ({ customerId, f
 
   useEffect(() => {
     axios
-      .get(`/api/forms/${formId}/financial-contacts?customerId=${customerId}`)
+      .get(`/api/forms/${formId}/financial-contacts?billerId=${billerId}`)
       .then(res => setFormData(res.data))
       .catch(() => console.log("No data yet"));
-  }, [formId, customerId]);
+  }, [formId, billerId]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +28,7 @@ export const AdditionalFinancialContactsForm: React.FC<Props> = ({ customerId, f
 
   const handleSave = () => {
     axios
-      .post(`/api/forms/${formId}/financial-contacts`, { customerId, ...formData })
+      .post(`/api/forms/${formId}/financial-contacts`, { billerId, ...formData })
       .then(() => alert("Additional Financial Contact saved!"))
       .catch(() => alert("Error saving data"));
   };

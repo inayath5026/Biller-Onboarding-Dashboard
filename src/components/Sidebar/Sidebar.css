@@ -23,6 +23,7 @@
   cursor: pointer;
   font-size: 15px;
   color: #333;
+  border-radius: 5px;
 }
 
 .sidebar-item:hover {

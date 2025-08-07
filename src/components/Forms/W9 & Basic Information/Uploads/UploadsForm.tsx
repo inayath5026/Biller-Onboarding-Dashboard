@@ -8,9 +8,9 @@ interface DocumentUploadsFormData {
   driverLicenseBack: File | null;
 }
 
-interface Props { customerId: string; formId: string }
+interface Props { billerId: string; formId: string }
 
-export const UploadsForm: React.FC<Props> = ({ customerId, formId }) => {
+export const UploadsForm: React.FC<Props> = ({ billerId, formId }) => {
   const [formData, setFormData] = useState<DocumentUploadsFormData>({
     w9Form: null,
     driverLicenseFront: null,
@@ -25,7 +25,7 @@ export const UploadsForm: React.FC<Props> = ({ customerId, formId }) => {
 
   const handleSave = async () => {
     const uploadData = new FormData();
-    uploadData.append("customerId", customerId.toString());
+    uploadData.append("billerId", billerId.toString());
     if (formData.w9Form) uploadData.append("w9Form", formData.w9Form);
     if (formData.driverLicenseFront) uploadData.append("driverLicenseFront", formData.driverLicenseFront);
     if (formData.driverLicenseBack) uploadData.append("driverLicenseBack", formData.driverLicenseBack);

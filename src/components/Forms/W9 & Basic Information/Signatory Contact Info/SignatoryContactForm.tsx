@@ -9,9 +9,9 @@ interface SignatoryContactFormData {
   email: string;
 }
 
-interface Props { customerId: string; formId: string }
+interface Props { billerId: string; formId: string }
 
-export const SignatoryContactForm: React.FC<Props> = ({ customerId, formId }) => {
+export const SignatoryContactForm: React.FC<Props> = ({ billerId, formId }) => {
   const [formData, setFormData] = useState<SignatoryContactFormData>({
     title: "",
     fullName: "",
@@ -21,10 +21,10 @@ export const SignatoryContactForm: React.FC<Props> = ({ customerId, formId }) =>
 
   useEffect(() => {
     axios
-      .get(`/api/forms/${formId}/signatory?customerId=${customerId}`)
+      .get(`/api/forms/${formId}/signatory?billerId=${billerId}`)
       .then(res => setFormData(res.data))
       .catch(() => console.log("No data yet"));
-  }, [formId, customerId]);
+  }, [formId, billerId]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +32,7 @@ export const SignatoryContactForm: React.FC<Props> = ({ customerId, formId }) =>
 
   const handleSave = () => {
     axios
-      .post(`/api/forms/${formId}/signatory`, { customerId, ...formData })
+      .post(`/api/forms/${formId}/signatory`, { billerId, ...formData })
       .then(() => alert("Signatory Contact Info saved!"))
       .catch(() => alert("Error saving data"));
   };

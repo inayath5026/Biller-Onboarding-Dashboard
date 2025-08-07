@@ -1,16 +1,18 @@
-import { useState } from "react";
-import { Sidebar } from "./components/Sidebar/Sidebar";
-import { StepPanel } from "./components/StepPanel/StepPanel";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./components/Dashboard/Dashboard.tsx";
+import SignIn from "./components/SignIn/SignIn.tsx";
+import Login from "./components/Login/Login.tsx";
+import NotFound from "./components/NotFound/NotFound.tsx";
 
 export default function App() {
-  const steps = ["W-9 & Basic Information", "OFAC Questionnaire", "Invoice Details", "Sign Documents"];
-  const [currentStep, setCurrentStep] = useState<number>(0);
-
   return (
-    <div className="app-container">
-      <Sidebar steps={steps} currentStep={currentStep} onStepChange={setCurrentStep} />
-      <StepPanel currentStep={currentStep} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }

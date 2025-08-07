@@ -1,0 +1,102 @@
+/* Background */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0073a9, #006491);
+}
+
+/* Sign-in box */
+.signin-box {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Heading */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.required {
+  color: red;
+}
+
+/* Input */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Button */
+.signin-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0b2e5a;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-btn:hover {
+  background-color: #0a274d;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+/* Demo instructions */
+.demo-box {
+  background: #f7f7f7;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.demo-box p {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.demo-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.demo-box li {
+  margin-bottom: 6px;
+}
