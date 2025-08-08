@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./BusinessInfoForm.css";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 interface BusinessInfoFormData {
   legalName: string;
@@ -50,7 +51,7 @@ const BusinessInfoForm: React.FC<Props> = ({ billerId, formId }) => {
         setLoading(false);
       }
     };
-    fetchForm();
+    //fetchForm();
   }, [billerId, formId]);
 
   // Handle input changes
@@ -61,20 +62,39 @@ const BusinessInfoForm: React.FC<Props> = ({ billerId, formId }) => {
   };
 
   // Save directly to API
-  const handleSave = async () => {
-    try {
-      await axios.post(`https://your-api-domain.com/api/forms/${formId}`, {
-        ...formData,
-        billerId,
-      });
-      alert("Form saved successfully!");
-    } catch (err) {
-      console.error("Error saving form data:", err);
-      alert("Failed to save form.");
-    }
-  };
+const handleSave = async () => {
+  try {
+    // Generate GUID for ExternalId
+    const externalId = uuidv4();
 
-  if (loading) return <p>Loading...</p>;
+    // Hardcoded / default values for required fields
+    const payload = {
+      merchantId: 4321, // Assuming backend auto-generates or not used
+      subscriberId: 123, // Hardcoded example Subscriber ID
+      merchantDBA: formData.dbaName || "Default DBA",
+      businessType: formData.entityType || "Retail",
+      active: true,
+      externalId: externalId,
+      dateRecAdded: new Date().toISOString()
+    };
+
+    console.log("Saving merchant with payload:", payload);
+
+    const res = await axios.post(
+      "http://localhost:5140/api/v1/merchant",
+      payload
+    );
+
+    alert(`Merchant created successfully! External ID: ${externalId}`);
+    console.log("Response:", res.data);
+  } catch (err) {
+    console.error("Error saving merchant:", err);
+    alert("Failed to create merchant.");
+  }
+};
+
+
+  //if (loading) return <p>Loading...</p>;
 
   return (
     <div className="business-info-form">
