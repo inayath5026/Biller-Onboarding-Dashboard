@@ -1,0 +1,185 @@
+/* Wrapper */
+.sd-wrapper {
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sd-container {
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.sd-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sd-subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Signature Box */
+.sd-signature-box {
+  border: 1px solid #d6e3f8;
+  background: #f9fbff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.sd-signature-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.sd-signature-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.sd-signature-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.sd-btn-primary {
+  background-color: #2468f2;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sd-btn-outline {
+  background-color: white;
+  color: #2468f2;
+  padding: 6px 14px;
+  border: 1px solid #2468f2;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sd-btn-primary:hover {
+  background-color: #1d55c5;
+}
+
+.sd-btn-outline:hover {
+  background-color: #f0f4ff;
+}
+
+/* Progress Box */
+.sd-progress-box {
+  display: flex;
+  justify-content: space-between;
+  background: #f8f9ff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.sd-progress-count {
+  color: #333;
+}
+
+.sd-progress-percent {
+  color: #2468f2;
+  font-weight: 500;
+}
+
+/* Documents List */
+.sd-documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sd-doc-item {
+  background: #fffaf0;
+  border: 1px solid #ffdf9e;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sd-doc-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sd-doc-icon {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.sd-doc-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.sd-doc-desc {
+  font-size: 13px;
+  color: #555;
+}
+
+.sd-doc-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sd-doc-required {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.sd-doc-status {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Footer */
+.sd-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.sd-footer-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* Uploaded signature preview fixed size */
+.cs-uploaded-preview {
+  width: 200px;       /* Fixed width */
+  height: 100px;      /* Fixed height */
+  object-fit: contain; /* Keep aspect ratio without cropping */
+  border: 1px solid #ccc;
+  background-color: white;
+  display: block;
+  margin-top: 10px;
+}

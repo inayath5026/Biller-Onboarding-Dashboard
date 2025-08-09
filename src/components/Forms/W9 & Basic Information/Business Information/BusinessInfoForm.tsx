@@ -42,16 +42,17 @@ const BusinessInfoForm: React.FC<Props> = ({ billerId, formId }) => {
     const fetchForm = async () => {
       try {
         const res = await axios.get(
-          `https://your-api-domain.com/api/forms/${formId}?billerId=${billerId}`
+          `http://localhost:5140/api/v1/merchant/4321`
         );
         if (res.data) setFormData(res.data);
+        console.log("Fetched form data:", res.data);
       } catch (err) {
         console.error("Error fetching form data:", err);
       } finally {
         setLoading(false);
       }
     };
-    //fetchForm();
+    fetchForm();
   }, [billerId, formId]);
 
   // Handle input changes
@@ -94,7 +95,7 @@ const handleSave = async () => {
 };
 
 
-  //if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div className="business-info-form">

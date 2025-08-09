@@ -2,6 +2,8 @@ import React from "react";
 import { W9Panel } from "../panels/W9Panel/W9Panel";
 import "./StepPanel.css";
 import { OFACPanel } from "../panels/OFACPanel/OFACPanel";
+import { InvoiceDetailsPanel } from "../panels/InvoiceDetails/InvoiceDetailsPanel";
+import { SignDocumentsPanel } from "../panels/SignDocuments/SignDocumentsPanel";
 
 interface StepPanelProps {
     currentStep: number,
@@ -15,6 +17,8 @@ export const StepPanel: React.FC<StepPanelProps> = ({ currentStep, onStepComplet
 
             {(currentStep == 0) && <W9Panel />}
             {(currentStep == 1) && <OFACPanel />}
+            {(currentStep == 2) && <InvoiceDetailsPanel />}
+            {(currentStep == 3) && <SignDocumentsPanel />}
 
             <div className="step-buttons">
                 <button className="btn btn-secondary" onClick={onBackStep}>Back</button>

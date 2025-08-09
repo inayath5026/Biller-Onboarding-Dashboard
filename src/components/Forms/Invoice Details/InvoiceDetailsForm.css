@@ -1,0 +1,162 @@
+/* Container */
+.idf-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Title & Subtitle */
+.idf-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.idf-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+.idf-section {
+  margin-bottom: 25px;
+}
+
+/* Info Boxes */
+.idf-info-box {
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.idf-green {
+  background-color: #e6f6ea;
+  border: 1px solid #b7e0c2;
+}
+
+.idf-blue {
+  background-color: #f0f6ff;
+  border: 1px solid #c6dcf7;
+}
+
+.idf-purple {
+  background-color: #f9f0ff;
+  border: 1px solid #e0c6f7;
+}
+
+/* Row Layout */
+.idf-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Fields */
+.idf-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.idf-field label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.idf-field input,
+.idf-field select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.idf-field small {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.idf-required {
+  color: red;
+}
+
+/* Features */
+.idf-feature {
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.idf-feature strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Upload Fields */
+.idf-upload-field {
+  margin-bottom: 20px;
+}
+
+.idf-file-drop {
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.idf-file-drop p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.idf-file-drop button {
+  padding: 6px 12px;
+  background: #f9f9f9;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.idf-file-drop button:hover {
+  background: #eee;
+}
+
+/* Buttons */
+.idf-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.idf-btn-light {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.idf-btn-dark {
+  background: #0d2952;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.idf-btn-light:hover {
+  background: #f4f4f4;
+}
+
+.idf-btn-dark:hover {
+  background: #0a1f3b;
+}
