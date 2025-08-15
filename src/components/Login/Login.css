@@ -25,7 +25,9 @@ body {
 /* Logo */
 .logo {
   display: block;
-  margin: 0 auto 20px auto;
+  max-width: 200px;  
+  height: auto;
+  object-fit: contain;
 }
 
 /* Heading */

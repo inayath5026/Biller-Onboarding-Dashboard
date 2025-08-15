@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import logo from "../../assets/images/logo.png";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -17,7 +18,7 @@ const Login: React.FC = () => {
     <div className="container">
       <div className="signin-box">
         <img
-          src="https://via.placeholder.com/200x50?text=InvoiceCloud+Logo"
+          src={logo}
           alt="InvoiceCloud Logo"
           className="logo"
         />
