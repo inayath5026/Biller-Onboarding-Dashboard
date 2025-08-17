@@ -22,7 +22,6 @@ const CreateSignature: React.FC<CreateSignatureProps> = ({ onClose, onSave }) =>
     }
 
     // isEmpty() is provided by the underlying signaturePad API
-    // @ts-ignore - react-signature-canvas doesn't always type every method strictly
     if ((sigCanvas.current as any).isEmpty && (sigCanvas.current as any).isEmpty()) {
       alert("Please draw your signature first!");
       return;
@@ -56,7 +55,6 @@ const CreateSignature: React.FC<CreateSignatureProps> = ({ onClose, onSave }) =>
 
     // Convert to data URL
     const dataUrl = exportCanvas.toDataURL("image/png");
-    // small debug (optional): console.log("dataUrl length", dataUrl.length);
     onSave(dataUrl);
     // Parent will close the modal (so parent controls lifecycle)
   };

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./NotFound.css";
+import logo from "../../assets/images/logo.png"; 
 
 const NotFound: React.FC = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const NotFound: React.FC = () => {
     <div className="notfound-container">
       <div className="notfound-box">
         <img
-          src="https://via.placeholder.com/200x50?text=InvoiceCloud+Logo"
+          src={logo}
           alt="InvoiceCloud Logo"
           className="notfound-logo"
         />
